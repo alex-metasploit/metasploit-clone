@@ -1,0 +1,25 @@
+name: ronin-metasploit
+summary: A Ronin library which provides support for accessing The Metasploit Framework.
+description:
+  Ronin Metasploit is a Ronin library which provides support for accessing
+  The Metasploit Framework.
+
+license: GPL-2
+authors: Postmodern
+email: postmodern.mod3@gmail.com
+homepage: http://github.com/ronin-ruby/ronin-metasploit
+has_yard: true
+
+dependencies:
+  pullr: ~> 0.1.2
+  # DataMapper dependencies:
+  dm-is-read_only: ~> 0.2.0
+  # Ronin dependencies:
+  # ronin-support: ~> 0.2
+  ronin-support: ~> 0.2.0.rc1
+  # ronin: ~> 1.1
+  ronin: ~> 1.1.0.rc2
+
+development_dependencies:
+  bundler: ~> 1.0.0
+  yard: ~> 0.7.0

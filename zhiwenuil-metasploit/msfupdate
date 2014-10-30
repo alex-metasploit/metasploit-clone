@@ -1,0 +1,23 @@
+#!/usr/bin/env ruby
+
+msfbase = __FILE__
+while File.symlink?(msfbase)
+	msfbase = File.expand_path(File.readlink(msfbase), File.dirname(msfbase))
+end
+
+
+Dir.chdir(File.dirname(msfbase))
+
+$stderr.puts "[*]"
+$stderr.puts "[*] Attempting to update the Metasploit Framework..."
+$stderr.puts "[*]"
+$stderr.puts ""
+
+system("svn update")
+
+if ARGV.shift.to_s == "wait"
+	$stderr.puts ""
+	$stderr.puts "[*] Please hit enter to exit"
+	$stderr.puts ""	
+	$stdin.readline
+end
